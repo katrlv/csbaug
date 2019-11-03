@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Arbutus+Slab|Homemade+Apple&display=swap");
+
+/** generic styling **/
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Homemade Apple", cursive;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Arbutus Slab", serif;
+  background-color: lemonchiffon;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+header,
+.main-content,
+footer {
+  padding: 2em;
+}
+
+header {
+  background: lemonchiffon;
+}
+.main-content {
+  background: olive;
+}
+footer {
+  background: brown;
+}
+
+/** css grid stuff below **/
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    ". main ."
+    "footer footer footer";
+}
+
+header {
+  grid-column: header / header;
+  padding: 115px;
+}
+
+.header-bio {
+  max-width: 850px;
+}
+
+.main-content {
+  grid-area: main;
+  text-align: center;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  height: 650px;
+  background-color: olive;
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.main-content > h1 {
+  font-size: 24px;
+}
+
+.project-one {
+  position: relative;
+  color: white;
+  border-radius: 5px;
+  background-image: url("https://i.ibb.co/8xktmt3/Screen-Shot-2019-08-27-at-12-29-40-AM.png");
+  transition: transform 0.2s;
+}
+.project-one > h2 {
+  position: absolute;
+  bottom: 0;
+}
+
+.project-two {
+  position: relative;
+  color: whitesmoke;
+  border-radius: 5px;
+  background-image: url("https://i.ibb.co/pPVrjwB/Screen-Shot-2019-08-27-at-12-45-34-AM.png");
+}
+.project-two > h2 {
+  position: absolute;
+  bottom: 0;
+}
+
+.project-three {
+  position: relative;
+  color: whitesmoke;
+  border-radius: 5px;
+  background-image: url("https://i.ibb.co/BLSG9cX/Screen-Shot-2019-08-27-at-12-48-33-AM.png");
+}
+.project-three > h2 {
+  position: absolute;
+  bottom: 0;
+}
+
+.project-four {
+  position: relative;
+  color: white;
+  background-color: white;
+  border-radius: 5px;
+  background-image: url("https://i.ibb.co/nnGPZ6w/wcdsb-projecthumbnail.png");
+}
+.project-four > h2 {
+  position: absolute;
+  bottom: 0;
+}
+
+.project-title {
+  background-color: black;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+@media only screen and (max-width: 992px) {
+  .project-title {
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 55px;
+  }
+}
+
+footer {
+  grid-area: footer;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 90px;
+}
+
+.designed-by {
+  position: absolute;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 100%;
+  color: rgb(128, 125, 125);
+  text-align: center;
+  font-size: 13px;
+}
